@@ -15,7 +15,7 @@ export class ReservationService {
   // CRUD
 
   getReservations(): Observable<Reservation[]> {
-    return this.http.get<Reservation[]>(this.apiUrl + '/reservations');
+    return this.http.get<Reservation[]>(`${this.apiUrl}/reservations`);
   }
 
   getReservation(id: string): Reservation | undefined {
